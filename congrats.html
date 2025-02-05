@@ -19,31 +19,33 @@
       <p id="congrts">We've emailed your ticket to <span id="userEmail"></span> and will send updates in the run-up to the event.</p>
     </div>
     <div id="ticket">
-      <div id="ticketlogo">
-        <img src="assets/images/logo-mark.svg" alt="LOGO">
-        <a>Coding Conf</a>
-      </div>
-      <!-- Место для отображения аватара -->
+      
+
+      <p> <span id="userName"></span></p>
       <img id="avatarPreview" alt="Avatar Preview" style="width: 100px; height: 100px; border-radius: 50%;">
+
     </div>
   </main>
 
   <script>
-    // Получаем данные пользователя из localStorage
-    const userName = localStorage.getItem("userName");
-    const userEmail = localStorage.getItem("userEmail");
-    const userAvatar = localStorage.getItem("userAvatar"); // Получаем аватар из localStorage
+const userName = localStorage.getItem("userName");
+const userEmail = localStorage.getItem("userEmail");
+const userAvatar = localStorage.getItem("userAvatar"); 
 
-    // Если данные о пользователе есть, отображаем их
-    if (userName && userEmail) {
-      document.getElementById("userName").textContent = userName;
-      document.getElementById("userEmail").textContent = userEmail;
-    }
+if (userName) {
+    document.querySelectorAll("#userName").forEach(el => {
+        el.textContent = userName;
+    });
+}
 
-    // Если аватар существует, показываем его
-    if (userAvatar) {
-      document.getElementById("avatarPreview").src = userAvatar;
-    }
+if (userEmail) {
+    document.getElementById("userEmail").textContent = userEmail;
+}
+
+if (userAvatar) {
+    document.getElementById("avatarPreview").src = userAvatar;
+}
+
   </script>
 </body>
 </html>
