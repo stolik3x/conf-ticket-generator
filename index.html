@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Conference ticket generator</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<main>
+  <div id="logo">
+    <img src="assets/images/logo-mark.svg" alt="LOGO">
+    <a>Coding Conf</a>
+  </div>
+  <div id="hContainer">
+    <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+    <h3>Secure your spot at next year's biggest coding conference.</h3>
+  </div>
+  <div id="FORMA">
+    <div id="uploadavatar">
+      <p>Upload Avatar</p>
+      <label for="avatar" class="upload-container">
+        <img src="assets/images/icon-upload.svg" alt="Upload Icon">
+        <p>Drag and drop or click to upload</p>
+        <input type="file" id="avatar" accept=".jpg, .jpeg, .png">
+        
+        <!-- Контейнер для отображения изображения и текста после загрузки -->
+        <div id="previewContainer" style="display: none;">
+          <img id="avatarPreview" src="" alt="Avatar Preview" style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+          <p id="uploadStatus">Image uploaded successfully!</p>
+        </div>
+      </label>
+      <p id="upld">Upload your photo (JPG or PNG, max size: 500KB).</p>
+    </div>
+    <div id="formContainer">
+      <p>Full Name</p>
+      <input id="nameArea" class="inputArea" type="text" placeholder="Enter your full name" required>
+      <p class="areaErr" id="nameErr"></p>
+
+      <p>Email Address</p>
+      <input id="mailArea" class="inputArea" type="email" placeholder="example@email.com" required>
+      <p class="areaErr" id="mailErr"></p>
+
+      <p>GitHub Username</p>
+      <input id="gitArea" class="inputArea" type="text" placeholder="@yourusername" required pattern="^@[a-zA-Z0-9]+$">
+      <p class="areaErr" id="gitErr"></p>
+
+      <button class="sbmtButton" type="submit" id="submitButton">Generate My Ticket</button>
+    </div>
+  </div>
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>
