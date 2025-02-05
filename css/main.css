@@ -8,16 +8,15 @@
 /* index1/ */
 html {
     background-image: 
-        url('/conference-ticket-generator-main/assets/images/pattern-squiggly-line-bottom-desktop.svg'), 
-        url('/conference-ticket-generator-main/assets/images/pattern-squiggly-line-top.svg'),  
-        url('/conference-ticket-generator-main/assets/images/background-desktop.png'); 
+        url('../assets/images/pattern-squiggly-line-bottom-desktop.svg'), 
+        url('../assets/images/pattern-squiggly-line-top.svg'),  
+        url('../assets/images/background-desktop.png');
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 500px 300px, auto, cover; 
     background-position: left bottom, right top, center;
     font-family: 'Inconsolata';
     min-height: 100vh;
 }
-
 body {
     margin-top: 50px;
 }
@@ -165,8 +164,6 @@ h3 {
     background-position: center;
 }
 
-#ticketlogo {
-}
 
 /* index2\ */
 
